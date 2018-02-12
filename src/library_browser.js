@@ -250,11 +250,6 @@ var LibraryBrowser = {
                                  function(){}; // no-op if function does not exist
         canvas.exitPointerLock = canvas.exitPointerLock.bind(document);
 
-        document.addEventListener('pointerlockchange', pointerLockChange, false);
-        document.addEventListener('mozpointerlockchange', pointerLockChange, false);
-        document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
-        document.addEventListener('mspointerlockchange', pointerLockChange, false);
-
         if (Module['elementPointerLock']) {
           canvas.addEventListener("click", function(ev) {
             if (!Browser.pointerLock && Module['canvas'].requestPointerLock) {
